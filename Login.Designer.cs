@@ -107,6 +107,7 @@
         private void Login_Load(object sender, EventArgs e)
         {
             //throw new NotImplementedException();
+            
         }
 
         private void txt_username_TextChanged(object sender, EventArgs e)
@@ -115,8 +116,7 @@
         }
 
         #endregion
-
-        private TextBox txt_username;
+        public TextBox txt_username;
         private TextBox txt_pass;
         private Button btn_lgn;
         private LinkLabel frgt_pass;

@@ -7,15 +7,17 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace BeyogluOtomotiv
 {
     public partial class Login : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-43SO5ER;Initial Catalog=BeyogluOtomotiv;Integrated Security=True");
-
+        public static string username = string.Empty;
         public Login()
         {
             InitializeComponent();
@@ -31,15 +33,16 @@ namespace BeyogluOtomotiv
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand("Select *From Owners where Username=@username AND Pass=@pass", connection);
+                    SqlCommand command = new SqlCommand("Select *From Owner where Username=@username AND Pass=@pass", connection);
                     command.Parameters.AddWithValue("@username", txt_username.Text);
                     command.Parameters.AddWithValue("@pass", txt_pass.Text);
                     SqlDataReader reader = command.ExecuteReader();
                     if(reader.Read())
                     {
+                        username = txt_username.Text;
                         MessageBox.Show("Login successful!");
                         MainPage main = new MainPage();
-                        main.Show();
+                        main.ShowDialog();
                         this.Close();
                     }
                     else

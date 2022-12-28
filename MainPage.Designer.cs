@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_Menu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_namesurname = new System.Windows.Forms.Label();
+            this.lbl_user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -49,7 +48,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Showroom = new System.Windows.Forms.Button();
             this.btnShoeRoom = new System.Windows.Forms.Button();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,8 +88,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_namesurname);
+            this.panel1.Controls.Add(this.lbl_user);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 73);
@@ -99,27 +97,27 @@
             this.panel1.Size = new System.Drawing.Size(246, 144);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lbl_namesurname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
-            this.label2.Location = new System.Drawing.Point(64, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Name-Surname";
+            this.lbl_namesurname.AutoSize = true;
+            this.lbl_namesurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_namesurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.lbl_namesurname.Location = new System.Drawing.Point(60, 85);
+            this.lbl_namesurname.Name = "lbl_namesurname";
+            this.lbl_namesurname.Size = new System.Drawing.Size(138, 20);
+            this.lbl_namesurname.TabIndex = 2;
+            this.lbl_namesurname.Text = "Name-Surname";
             // 
-            // label1
+            // lbl_user
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(70, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name";
+            this.lbl_user.AutoSize = true;
+            this.lbl_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
+            this.lbl_user.Location = new System.Drawing.Point(87, 105);
+            this.lbl_user.Name = "lbl_user";
+            this.lbl_user.Size = new System.Drawing.Size(79, 15);
+            this.lbl_user.TabIndex = 1;
+            this.lbl_user.Text = "User Name";
             // 
             // pictureBox1
             // 
@@ -288,11 +286,6 @@
             this.btnShoeRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnShoeRoom.UseVisualStyleBackColor = true;
             // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -321,14 +314,13 @@
 
         private FlowLayoutPanel sidebar;
         private Panel panel1;
-        private Label label2;
-        private Label label1;
+        private Label lbl_namesurname;
+        private Label lbl_user;
         private PictureBox pictureBox1;
         private Button btnDashboard;
         private Button btnShoeRoom;
         private Button btnCarSales;
         private Button btnList;
-        private System.Windows.Forms.Timer sideBarTimer;
         private Panel panel4;
         private Panel panel7;
         private Panel panel6;

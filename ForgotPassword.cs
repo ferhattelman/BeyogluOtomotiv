@@ -31,7 +31,7 @@ namespace BeyogluOtomotiv
                 string godPass = "phL26VRydF";
                 string email = txt_email.Text;
                 connection.Open();
-                SqlCommand command = new SqlCommand("SELECT Pass FROM Owners WHERE Email='" + txt_email.Text + "'", connection);
+                SqlCommand command = new SqlCommand("SELECT Pass FROM Owner WHERE Email='" + txt_email.Text + "'", connection);
                 SqlDataReader dataReader = command.ExecuteReader();
                 string password = String.Empty;
                 while (dataReader.Read())
